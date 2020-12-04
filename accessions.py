@@ -77,8 +77,8 @@ def main():
 
         print('Processing item ' + str(items_read) + ' bc=' + barcode)
 
-        # step one, retrieve by barcode from SCF
-        r_owner_master_record = requests.get(ALMA_SERVER + GET_BY_BARCODE.format(barcode),
+        # step one, retrieve by barcode from SCF (appending 'x' to barcode)
+        r_owner_master_record = requests.get(ALMA_SERVER + GET_BY_BARCODE.format(barcode + 'x'),
                                              params={'apikey': FROM_IZ_KEY})
 
         if r_owner_master_record.status_code != requests.codes.ok:
@@ -117,6 +117,10 @@ def main():
         item_data = root.find('./item_data')
         pid_element = item_data.find('pid')
         item_data.remove(pid_element)
+
+        # Remove trailing x from barcode
+        barcode_element = item_data.find('barcode')
+        barcode_element.text = barcode_element.text.rstrip('X')
 
         # Remove SCF Provenance element
         provenance_element = item_data.find('provenance')
