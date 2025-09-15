@@ -72,14 +72,14 @@ prompt_toolkit==3.0.52
 psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pycparser==2.22
+pycparser==2.23
 Pygments==2.19.2
 pyrsistent==0.20.0
 python-dateutil==2.9.0.post0
 python-json-logger==3.3.0
 PyYAML==6.0.2
-pyzmq==27.0.2
-qtconsole==5.6.1
+pyzmq==27.1.0
+qtconsole==5.7.0
 QtPy==2.4.3
 referencing==0.36.2
 requests==2.32.5
