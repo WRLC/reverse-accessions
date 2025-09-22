@@ -15,7 +15,7 @@ cffi==2.0.0
 chardet==5.2.0
 charset-normalizer==3.4.3
 comm==0.2.3
-debugpy==1.8.16
+debugpy==1.8.17
 decorator==5.2.1
 defusedxml==0.7.1
 entrypoints==0.4
@@ -67,9 +67,9 @@ parso==0.8.5
 pexpect==4.9.0
 pickleshare==0.7.5
 platformdirs==4.4.0
-prometheus_client==0.22.1
+prometheus_client==0.23.1
 prompt_toolkit==3.0.52
-psutil==7.0.0
+psutil==7.1.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pycparser==2.23
